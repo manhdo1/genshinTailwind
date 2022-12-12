@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font-family: "Manrope", sans-serif;
+    outline: none;
+    cursor: pointer;
+  }
+ 
+}
+@layer components {
+  .layout-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@layer utilities {
+  .scroll-snap-mandatory {
+    scroll-snap-type: x mandatory;
+  }
+  .scroll-snap-always {
+    scroll-snap-stop: always;
+  }
+  .scroll-snap-start {
+    scroll-snap-align: start;
+  }
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+}
+.genshin-entry-body-bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-repeat: repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+.genshin-entry-body-bg-video-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.genshin-entry-body-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
